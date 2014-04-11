@@ -1,0 +1,19 @@
+{
+  "name": "sente",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "executive": "^0.4.4",
+    "coffee-script": "^1.7.1",
+    "source-map-support": "^0.2.5",
+    "mocha": "^1.18.2",
+    "brief": "^1.1.0",
+    "chai": "^1.9.1"
+  }
+}

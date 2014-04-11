@@ -1,0 +1,6 @@
+node_modules/
+Cakefile
+test/
+src/
+*.map
+.test
