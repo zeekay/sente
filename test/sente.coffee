@@ -1,21 +1,20 @@
-should  = require('chai').should()
+should = require('chai').should()
+sente  = require '../'
 
-sente = require '../'
+class Renderable extends sente.Component
+  observes:
+    tick: ->
+
+class WatchA extends sente.Component
+  observes:
+    'change:a': (value) ->
+
+class Character extends sente.Entity
+  components: [Renderable, WatchA]
 
 describe 'Component', ->
   it 'should respond to events', ->
-    class Renderable extends sente.Component
-      observes:
-        tick: ->
-          # render self
-
   it 'should be able to observe changes in an entity', ->
-    class WatchA extends sente.Component
-      observes:
-        'change:a': (value) ->
-          # do somethign with a
 
 describe 'Entity', ->
   it 'should compose components', ->
-    class Character extends sente.Entity
-      components: [Renderable, WatchA]
