@@ -1,13 +1,36 @@
 {
   "name": "sente",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "description": "Highly experimental ECS.",
+  "homepage": "http://github.com/zeekay/sente",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeekay/sente"
   },
-  "author": "",
-  "license": "ISC",
+  "bugs": {
+    "url": "http://github.com/zeekay/sente/issues"
+  },
+  "keywords": [
+    "ecs",
+    "entity",
+    "component"
+  ],
+  "author": {
+    "name": "Zach Kelling",
+    "email": "zk@monoid.io",
+    "url": "http://zeekay.io"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/zeekay/sente/blob/master/LICENSE"
+    }
+  ],
+  "main": "lib/",
+  "scripts": {
+    "prepublish": "cake build",
+    "test": "cake test"
+  },
   "devDependencies": {
     "executive": "^0.4.4",
     "coffee-script": "^1.7.1",
