@@ -1,14 +1,14 @@
-exec = require 'executive'
+exec = require('executive').interactive
 
 option '-g', '--grep [filter]', 'test filter'
 option '-w', '--watch',         'watch for changes and re-run tests'
 
 task 'build', 'compile src/*.coffee to lib/*.js', ->
-  exec './node_modules/.bin/coffee -bcm -o lib/ src/'
+  exec 'node_modules/.bin/coffee -bcm -o lib/ src/'
   exec 'node_modules/.bin/coffee -bcm -o .test test/'
 
 task 'watch', 'watch for changes and recompile project', ->
-  exec './node_modules/.bin/coffee -bcmw -o lib/ src/'
+  exec 'node_modules/.bin/coffee -bcmw -o lib/ src/'
   exec 'node_modules/.bin/coffee -bcmw -o .test test/'
 
 task 'gh-pages', 'Publish github page', ->
@@ -23,7 +23,7 @@ task 'test', 'run tests', (options) ->
   if options.watch?
     args.push '--watch'
 
-  exec "NODE_ENV=test ./node_modules/.bin/mocha
+  exec "NODE_ENV=test node_modules/.bin/mocha
   --colors
   --reporter spec
   --timeout 5000
