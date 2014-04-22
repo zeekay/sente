@@ -33,7 +33,7 @@ task 'test', 'run tests', (options) ->
   --reporter spec
   --timeout 5000
   --compilers coffee:coffee-script/register
-  --require test/_helper.js
+  --require postmortem/register
   #{args.join ' '}
   #{options.test}"
 
